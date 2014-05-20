@@ -10,7 +10,7 @@ PORT = 8080
 REQUEST_TOKEN_URL = ' http://join.agiliq.com/oauth/request_token/'
 ACCESS_TOKEN_URL = ' http://join.agiliq.com/oauth/access_token/'
 AUTHORIZATION_URL = 'http://.join_agiliq.com/oauth/authorize/'
-CALLBACK_URL = 'http://github.com/sunnyanjani/oauth_test/new/master'
+CALLBACK_URL = 'https://github.com/sunnyanjani/oauth_test/blob/master/consumer_run'
 RESOURCE_URL = ' http://join.agiliq.com/'
 
 # key and secret granted by the service provider for this consumer application
@@ -27,6 +27,19 @@ class SimpleOAuthClient(oauth.OAuthClient):
         self.access_token_url = access_token_url
         self.authorization_url = authorization_url
         self.connection = httplib.HTTPConnection("%s:%d" % (self.server, self.port))
+        
+        inp = {'CONSUMER_KEY': 'O62fN5Mc1hgEvzyFFJ1Uak2sP8kGCwVUvCLptL8HdkpNYZDSuz', 'CONSUMER_SECRET': 'FPqfYSO77QEsXqkjcsUfbdXGKh3yDfXeLMBH8GfbsXIsdFY3cp', 'code'=''}
+        r = requests.post("http://join.agiliq.com/api/resume/upload/?access_token=", data=inp)
+        print r.text
+        {
+          ...
+                "form": {
+                "CONSUMER_KEY": "O62fN5Mc1hgEvzyFFJ1Uak2sP8kGCwVUvCLptL8HdkpNYZDSuz",
+                "CONSUMER_SECRET": "PqfYSO77QEsXqkjcsUfbdXGKh3yDfXeLMBH8GfbsXIsdFY3cp"
+                "Code":""
+        },
+          ...
+        }       
 
     def fetch_request_token(self, oauth_request):
         # via headers
@@ -57,3 +70,10 @@ class SimpleOAuthClient(oauth.OAuthClient):
         response = self.connection.getresponse()
         return response.read()
         
+        def pause():
+        print ''
+        time.sleep(1)
+
+if __name__ == '__main__':
+    run_example()
+    print 'Done.'
