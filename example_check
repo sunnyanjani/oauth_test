@@ -68,11 +68,3 @@ def run_example():
     print 'GOT'
     print 'non-oauth parameters: %s' % params
     pause()
-
-def pause():
-    print ''
-    time.sleep(1)
-
-if __name__ == '__main__':
-    run_example()
-    print 'Done.'
