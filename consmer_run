@@ -11,11 +11,11 @@ REQUEST_TOKEN_URL = ' http://join.agiliq.com/oauth/request_token/'
 ACCESS_TOKEN_URL = ' http://join.agiliq.com/oauth/access_token/'
 AUTHORIZATION_URL = 'http://.join_agiliq.com/oauth/authorize/'
 CALLBACK_URL = 'http://github.com/sunnyanjani/oauth_test/new/master'
-RESOURCE_URL = ' http://join.agiliq.com/oauth/'
+RESOURCE_URL = ' http://join.agiliq.com/'
 
 # key and secret granted by the service provider for this consumer application - same as the MockOAuthDataStore
-CONSUMER_KEY = 'key'
-CONSUMER_SECRET = 'secret'
+CONSUMER_KEY = 'O62fN5Mc1hgEvzyFFJ1Uak2sP8kGCwVUvCLptL8HdkpNYZDSuz'
+CONSUMER_SECRET = 'FPqfYSO77QEsXqkjcsUfbdXGKh3yDfXeLMBH8GfbsXIsdFY3cp'
 
 # example client using httplib with headers
 class SimpleOAuthClient(oauth.OAuthClient):
