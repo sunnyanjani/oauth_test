@@ -13,7 +13,7 @@ AUTHORIZATION_URL = 'http://.join_agiliq.com/oauth/authorize/'
 CALLBACK_URL = 'http://github.com/sunnyanjani/oauth_test/new/master'
 RESOURCE_URL = ' http://join.agiliq.com/'
 
-# key and secret granted by the service provider for this consumer application - same as the MockOAuthDataStore
+# key and secret granted by the service provider for this consumer application
 CONSUMER_KEY = 'O62fN5Mc1hgEvzyFFJ1Uak2sP8kGCwVUvCLptL8HdkpNYZDSuz'
 CONSUMER_SECRET = 'FPqfYSO77QEsXqkjcsUfbdXGKh3yDfXeLMBH8GfbsXIsdFY3cp'
 
