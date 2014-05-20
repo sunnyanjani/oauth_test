@@ -28,7 +28,8 @@ class SimpleOAuthClient(oauth.OAuthClient):
         self.authorization_url = authorization_url
         self.connection = httplib.HTTPConnection("%s:%d" % (self.server, self.port))
         
-        inp = {'CONSUMER_KEY': 'O62fN5Mc1hgEvzyFFJ1Uak2sP8kGCwVUvCLptL8HdkpNYZDSuz', 'CONSUMER_SECRET': 'FPqfYSO77QEsXqkjcsUfbdXGKh3yDfXeLMBH8GfbsXIsdFY3cp', 'code'=''}
+        inp = {'CONSUMER_KEY': 'O62fN5Mc1hgEvzyFFJ1Uak2sP8kGCwVUvCLptL8HdkpNYZDSuz', 'CONSUMER_SECRET': 'FPqfYSO77QEsXqkjcsUfbdXGKh3yDfXeLMBH8GfbsXIsdFY3cp', 'code'='','first_name'='Anjani Kumar','last_name'='Mareedu','projects_url'='https://github.com/sunnyanjani/oauth_test','code_url'='https://github.com/sunnyanjani/oauth_test/blob/master/consumer_run',  }
+        files = {'file': open('Anjani_kumar_resume.pdf', 'rb')}
         r = requests.post("http://join.agiliq.com/api/resume/upload/?access_token=", data=inp)
         print r.text
         {
@@ -37,6 +38,8 @@ class SimpleOAuthClient(oauth.OAuthClient):
                 "CONSUMER_KEY": "O62fN5Mc1hgEvzyFFJ1Uak2sP8kGCwVUvCLptL8HdkpNYZDSuz",
                 "CONSUMER_SECRET": "PqfYSO77QEsXqkjcsUfbdXGKh3yDfXeLMBH8GfbsXIsdFY3cp"
                 "Code":""
+                "first_name":Anjani Kumar
+                "last_name":Mareedu
         },
           ...
         }       
